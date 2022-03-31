@@ -1,4 +1,4 @@
-var ipApi = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_ohylAFSa2uQHRbADaRVF9EGOvbwcE&ipAddress=';
+var ipApi = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_ohylAFSa2uQHRbADaRVF9EGOvbwcE';
 var searchBtn = document.querySelector('.search-btn');
 var input = document.querySelector('.search-input');
 
@@ -6,7 +6,7 @@ function start() {
     getDataByApi(''); //user ip
     setEnterEvent();
     searchBtn.onclick = () => {
-        getDataByApi(input.value);
+        getDataByApi('&ipAddress=' + input.value);
     }
 }
 
