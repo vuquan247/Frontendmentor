@@ -1,0 +1,119 @@
+$dark-gray: hsl(0, 0%, 59%);
+$very-dark-gray: hsl(0, 0%, 17%);
+
+body {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    background: url("./images/pattern-bg.png");
+    margin: 0;
+    overflow: hidden;
+}
+.app {
+    width: 100vw;
+    .title {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 500;
+    }
+    .search-wrapper {
+        border-radius: 12px;
+        width: 450px;
+        height: 45px;
+        display: flex;
+        margin: 16px auto;
+        overflow: hidden;
+        .search-input {
+            font-size: 1rem;
+            padding: 12px 20px;
+            flex: 1;
+            border: none;
+            outline: none;
+        }
+        .search-btn {
+            width: 45px;
+            background-color: black;
+            color: white;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 50px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: $very-dark-gray;
+            }
+        }
+    }
+    .ip-info {
+        background-color: white;
+        width: 840px;
+        height: 72px;
+        border-radius: 12px;
+        box-shadow: 0px 11px 30px -18px black;
+        z-index: 100;
+        display: flex;
+        margin: 38px auto;
+        position: relative;
+        padding: 28px 0;
+        >div {
+            position: relative;
+            width: 25%;
+            padding: 0 28px;
+            box-sizing: border-box;
+            h6 {
+                text-transform: uppercase;
+                font-size: 0.6rem;
+                color: $dark-gray;
+                letter-spacing: 0.1rem;
+                margin: 0;
+            }
+            p {
+                font-size: 1.25rem;
+                font-weight: 500;
+                color: $very-dark-gray;
+                margin: 10px 0 0 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                -webkit-box-orient: vertical;
+            }
+        }
+        >*:not(:last-child) {
+            border-right: 1px solid #ddd;
+        }
+    }
+    #map {
+        height: 410px;
+        transform: translateY(-100px);
+        cursor: grabbing;
+    }
+}
+@media (max-width: 375px) {
+    .app {
+        .search-wrapper {
+            width: 90%;
+        }
+        .ip-info {
+            width: 90%;
+            flex-direction: column;
+            text-align: center;
+            height: fit-content;
+            > div {
+                width: 100%;
+                p {
+                    margin-top: 4px;
+                    -webkit-line-clamp: 1; 
+                }
+            }
+            > *:not(:last-child) {
+                border-right: none;
+                padding-bottom: 20px;
+            }
+        }
+        #map {
+            transform: translateY(-140px);
+        }
+    }
+}
