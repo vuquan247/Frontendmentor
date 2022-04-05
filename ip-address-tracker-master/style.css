@@ -85,7 +85,7 @@ body {
 }
 .app #map {
   height: 410px;
-  transform: translateY(-100px);
+  transform: translateY(-96px);
   cursor: grabbing;
 }
 
@@ -111,7 +111,7 @@ body {
     padding-bottom: 20px;
   }
   .app #map {
-    transform: translateY(-140px);
+    transform: translateY(-240px);
   }
 }
 

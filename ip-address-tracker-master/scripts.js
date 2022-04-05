@@ -6,7 +6,7 @@ function start() {
     getDataByApi(''); //user ip
     setEnterEvent();
     searchBtn.onclick = () => {
-        getDataByApi('&ipAddress=' + input.value);
+        getDataByApi('&ipAddress=' +  input.value);
     }
 }
 
